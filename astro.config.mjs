@@ -26,8 +26,8 @@ import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-cop
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://yuminjo.github.io/YuminJo-Blog/',
-	base: '/YuminJo-Blog/',   // repo 이름 맞춤
+	site: 'https://yuminjo.github.io',
+	base: '/YuminJo-Blog',
 	trailingSlash: "always",
 	integrations: [
 		tailwind({

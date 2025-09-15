@@ -19,8 +19,8 @@ jobs:
       # 필요에 따라 빌드 옵션 추가
       - uses: actions/upload-artifact@v4
         with:
-          name: github-pages
-          path: dist  # 빌드 결과 폴더
+          name: github-pages-${{ github.run_id }}
+          path: dist
 
   deploy:
     needs: build

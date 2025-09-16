@@ -77,22 +77,19 @@ const bannerOffset =
 	  data-overlayscrollbars-initialize
 >
 	<head>
-		  <title>{pageTitle}</title>
-		  <meta charset="UTF-8" />
-		  <meta name="description" content={description || pageTitle}>
-		  <meta name="author" content={profileConfig.name}>
+		<title>{pageTitle}</title>
 		
-		  <!-- Google Analytics 외부 스크립트 -->
-		  <script async src="https://www.googletagmanager.com/gtag/js?id=G-03FPQG7FQH"></script>
+		<!-- Google Analytics 외부 스크립트 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-03FPQG7FQH"></script>
 		
-		  <!-- TS 친화적 gtag 초기화 -->
-		  <script is:inline>
-		    (window as any).dataLayer = (window as any).dataLayer || [];
-		    (window as any).gtag = function(){ (window as any).dataLayer.push(arguments); };
+		<!-- TS 친화적 gtag 초기화 -->
+		<script is:inline>
+		  window.dataLayer = window.dataLayer || [];
+		  window.gtag = function(){ window.dataLayer.push(arguments); };
 		
-		    gtag('js', new Date());
-		    gtag('config', 'G-03FPQG7FQH');
-		  </script>
+		  gtag('js', new Date());
+		  gtag('config', 'G-03FPQG7FQH');
+		</script>
 	
 		<meta property="og:site_name" content={siteConfig.title}>
 

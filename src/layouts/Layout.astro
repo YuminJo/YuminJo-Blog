@@ -77,6 +77,21 @@ const bannerOffset =
 	  data-overlayscrollbars-initialize
 >
 	<head>
+	  <title>{pageTitle}</title>
+	  <meta charset="UTF-8" />
+	  <meta name="description" content={description || pageTitle}>
+	  <meta name="author" content={profileConfig.name}>
+	
+	  <!-- Google tag (gtag.js) 삽입 위치 -->
+	  <script async src="https://www.googletagmanager.com/gtag/js?id=G-03FPQG7FQH"></script>
+	  <script>
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	    gtag('js', new Date());
+	    gtag('config', 'G-03FPQG7FQH');
+	  </script>
+	
+		<meta property="og:site_name" content={siteConfig.title}>
 
 		<title>{pageTitle}</title>
 
